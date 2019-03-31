@@ -18,8 +18,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //createDialog();
-        createCustomDialog();
+        createDialog();
+        //createCustomDialog();
 
 
     }
@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
         dialog.setContentView(R.layout.dialog_test);
         dialog.setTitle("Test");
 
-        Button exit = (Button) dialog.findViewById(R.id.buttonExit);
+        Button exit = dialog.findViewById(R.id.buttonExit);
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
