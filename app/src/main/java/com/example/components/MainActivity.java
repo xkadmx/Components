@@ -17,6 +17,7 @@ public class MainActivity extends Activity {
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Dupa Jasiu")
                 .setMessage("Słowo na niedzielę")
+                .setCancelable(false)
                 .setPositiveButton("Tak", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
