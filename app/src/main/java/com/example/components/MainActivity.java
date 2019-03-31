@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
@@ -15,7 +16,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         AlertDialog dialog = new AlertDialog.Builder(this)
-                .setTitle("Dupa Jasiu")
+                .setTitle("Niedzielny serwis dezinformacyjny:")
                 .setMessage("Słowo na niedzielę")
                 .setCancelable(false)
                 .setPositiveButton("Tak", new DialogInterface.OnClickListener() {
@@ -24,10 +25,10 @@ public class MainActivity extends Activity {
                         dialog.dismiss();
 
                     }
-                }).setNegativeButton("Nie", new DialogInterface.OnClickListener() {
+                }).setNegativeButton("Niekoniecznie", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
+                        Toast.makeText(MainActivity.this,"Próbuj!",Toast.LENGTH_SHORT).show();
 
                     }
                 }).show();
